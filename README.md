@@ -27,12 +27,12 @@ All data is from the official NDIS Data Research Portal (March 2026 release):
 
 ---
 
-## What I Did (following the 5-step actuarial process)
+## What I Did (following the 4-step actuarial process)
 
-### Step 2: Data Identification & Assessment
+### Step 1: Data Identification & Assessment
 Cleaned both datasets and handled the pre-aggregated row structure (you can't just sum rows, since each row is already a group total). Parsed percentage strings, identified the NA-baseline split in the outcomes data, and reverse-coded 3 negatively-phrased questions.
 
-### Step 3: Mathematical Modelling
+### Step 2: Mathematical Modelling
 **Utilisation EDA (Q1 to Q9):** single-factor breakdowns using an `isolate()` helper that holds all other dimensions at ALL while varying one. This is the only valid way to read this dataset. Key findings: sensory/speech disabilities (52%), Capacity Building budgets (58%), and young adults (65%) all under-utilise significantly.
 
 **Fractional logit GLM:** fit on ~17k granular rows (no ALL rollups) with disability, age, SIL/SDA, support class, and region as predictors. Target is the utilisation rate, a proportion, so fractional logit was chosen because it handles the 0% and 100% boundary values that beta regression can't. Key output: ranked significant drivers with marginal effects in percentage points. The big finding: remoteness is NOT a significant independent driver once you control for who lives there.
@@ -41,10 +41,10 @@ Cleaned both datasets and handled the pre-aggregated row structure (you can't ju
 
 **Severity:** joined real segment budgets from the participant-numbers dataset onto the GLM rows (98.2% match rate). Computed unspent-per-participant as (1 minus utilisation) times real budget. Key finding: dollar priority is not the same as rate priority. The groups leaving the most *money* unused are older participants with large Core plans, not the lowest-utilisation groups.
 
-### Step 4: Risk Analysis
+### Step 3: Risk Analysis
 Base case: roughly $12.6bn of Core funding committed but undelivered annually (consistent with a ~$45bn scheme at ~74% utilisation, so this is unmet need, not destroyed money). Breakdown by disability, age, and region. Tail risk: the worst 5% of segments sit at 22% mean utilisation, dominated by the compounding-disadvantage profile of 98% no-SIL, 88% remote, 68% Capital, 35% sensory.
 
-### Step 5: Recommendations
+### Step 4: Recommendations
 Four targeted recommendations, each with an explicit cause, mechanism, and effect chain.
 
 ---
