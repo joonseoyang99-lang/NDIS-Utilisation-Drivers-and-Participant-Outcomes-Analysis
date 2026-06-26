@@ -45,7 +45,7 @@ Cleaned both datasets and handled the pre-aggregated row structure (you can't ju
 Base case: roughly $12.6bn of Core funding committed but undelivered annually (consistent with a ~$45bn scheme at ~74% utilisation, so this is unmet need, not destroyed money). Breakdown by disability, age, and region. Tail risk: the worst 5% of segments sit at 22% mean utilisation, dominated by the compounding-disadvantage profile of 98% no-SIL, 88% remote, 68% Capital, 35% sensory.
 
 ### Step 4: Recommendations
-Four targeted recommendations, each with an explicit cause, mechanism, and effect chain.
+Three targeted recommendations, each with an explicit cause, mechanism, and effect chain.
 
 ---
 
@@ -70,7 +70,6 @@ These are different groups. The NDIA needs different levers for each.
 1. **Transition support for 15 to 24:** a transition coordinator plus default SLES employment-skills funding. The only recommendation directly validated by outcomes data.
 2. **Remote provider access:** thin-market loading, telehealth funding, and NDIA-commissioned visiting clinics for zero-provider districts.
 3. **Plan-implementation support:** auto-funded support coordination for no-SIL, Capacity Building, and Capital participants, plus OT-led end-to-end equipment procurement.
-4. **Close the data gap:** add disability/region/support-class to the outcomes collection, and SIL to the budget data. Cheap to do, and it unlocks everything we couldn't validate.
 
 ---
 
